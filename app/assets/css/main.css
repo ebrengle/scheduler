@@ -1,0 +1,19 @@
+
+.basic-form {
+  //width: 600px;
+  //min-height: 500px;
+}
+
+.logo, .instruction {
+  text-align: center;
+}
+
+.prev {
+  float: left;
+  width: 150px;
+}
+
+.next {
+  float: right;
+  width: 150px;
+}

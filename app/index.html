@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en" ng-app="scheduler">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>3 Elements Chiropractic Online Appointment Request</title>
+
+    <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css">
+  </head>
+  <body ng-controller="mainController">
+
+    <!--Main Navigation -->
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <strong>Online Scheduling App</strong>
+          </a>
+        </div>
+      </div>
+    </nav>
+    <!-- End Main Navigation -->
+
+    <!--Begin Body of Page -->
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div ng-view></div>
+        </div>
+      </div>
+    </div>
+    <!--End Body of Page -->
+
+    <script src="../bower_components/angular/angular.min.js"></script>
+    <script src="../bower_components/angular-route/angular-route.min.js"></script>
+    <!--<script src="../bower_components/angular-bootstrap/ui-bootstrap.js"></script>-->
+    <!-- // <script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular.min.js"></script>
+    // <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.25/angular-route.js"></script> -->
+    <script src="assets/js/main.js"></script>
+
+  </body>
+</html>

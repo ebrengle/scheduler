@@ -1,0 +1,52 @@
+---
+name: appt-time
+url: /appt-time
+
+---
+
+<div class="grid-container">
+  <h1 class="logo">3 Elements Chiropractic & Wellness, PLLC</h1>
+  <p class="lead instruction">Request an appointment time online:</p>
+
+
+  <!--Basic User Form Input Div -->
+  <div class="grid-block">
+    <div class="grid-container">
+      <div class="basic-form">
+        <form>
+          <label for="physician">Select Your Provider:</label>
+          <select name="physician" id="">
+            <option></option>
+            <option value="">Dr. Kimberly G. Brengle</option>
+            <option value="">Molly Stoker Pohlman, LMT</option>
+          </select>
+
+          <label for="primary">Request Appointment Time:</label>
+          <input type="text" ui-date>
+
+
+          <label for="secondary">Select Alternative Time:</label>
+
+
+          <label for="first-avail">Request First Available:</label>
+
+
+
+
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <!--End Basic User Form Input Div -->
+
+  <!--Progress Bar Start -->
+  <div class="grid-block">
+    <progress class="high" value="66" max="100"></progress>
+  </div>
+  <!--End Progress Bar -->
+  <div>
+    <a class="button prev" ui-sref="home">Prev</a>
+    <a class="button next" ui-sref="confirmation" class="btn">Next</a>
+  </div>
+</div>
