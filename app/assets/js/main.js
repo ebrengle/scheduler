@@ -1,5 +1,5 @@
 //Creating the module named scheduler
-var scheduler = angular.module('scheduler', ['ngRoute']);
+var scheduler = angular.module('scheduler', ['ngRoute', 'mgcrea.ngStrap']);
 
 //configuring my routes for view of partials
 scheduler.config(function($routeProvider){
@@ -8,19 +8,19 @@ scheduler.config(function($routeProvider){
     //this is my homepage partial
     .when('/', {
       templateUrl : 'partials/home.html',
-      controller  : 'mainControler'
+      controller  : 'mainController'
     })
 
     //this is my appointment time view
     .when('/selectappt', {
       templateUrl : 'partials/selectappointment.html',
-      controller  : 'apptControler'
+      controller  : 'mainController'
     })
 
     //this is my confirmation page
     .when('/confirmation', {
       templateUrl : 'partials/confirmation.html',
-      controller  : 'confirmControler'
+      controller  : 'mainController'
     });
 });
 

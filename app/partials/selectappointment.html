@@ -1,52 +1,46 @@
----
-name: appt-time
-url: /appt-time
-
----
-
-<div class="grid-container">
   <h1 class="logo">3 Elements Chiropractic & Wellness, PLLC</h1>
   <p class="lead instruction">Request an appointment time online:</p>
 
 
   <!--Basic User Form Input Div -->
-  <div class="grid-block">
-    <div class="grid-container">
-      <div class="basic-form">
-        <form>
-          <label for="physician">Select Your Provider:</label>
-          <select name="physician" id="">
-            <option></option>
-            <option value="">Dr. Kimberly G. Brengle</option>
-            <option value="">Molly Stoker Pohlman, LMT</option>
-          </select>
 
-          <label for="primary">Request Appointment Time:</label>
-          <input type="text" ui-date>
-
-
-          <label for="secondary">Select Alternative Time:</label>
-
-
-          <label for="first-avail">Request First Available:</label>
-
-
-
-
-        </form>
-
+  <div class="basic-form">
+    <form>
+      <div class="form-group">
+        <label for="selectProvider">Please Select Your Provider:</label>
+        <select class="form-control" name="physician" id="selectProvier">
+          <option></option>
+          <option id="1">Dr. Kimberly G. Brengle</option>
+          <option id="2">Molly Stoker Pohlman, LMT</option>
+        </select>
       </div>
-    </div>
+
+      <div class="form-group" ng-class="{'has-error': datepickerForm.date.$invalid}">
+        <label class="control-label"><i class="fa fa-calendar"></i>Request Appointment Date:</label>
+        <input type="text" class="form-control" ng-model="selectedDate" name="date" bs-datepicker>
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Request Appointment Time</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+      </div>
+
+      <div class="form-group">
+        <label for="exampleInputEmail1">Request First Available</label>
+        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+      </div>
+
+
+    </form>
   </div>
   <!--End Basic User Form Input Div -->
 
   <!--Progress Bar Start -->
-  <div class="grid-block">
-    <progress class="high" value="66" max="100"></progress>
+  <div class="progress">
+    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="66.6" aria-valuemin="0" aria-valuemax="100" style="width: 66%;"></div>
   </div>
   <!--End Progress Bar -->
   <div>
-    <a class="button prev" ui-sref="home">Prev</a>
-    <a class="button next" ui-sref="confirmation" class="btn">Next</a>
+    <a href="#/" class="btn btn-default prev" >Prev</a>
+    <a href="#/confirmation" class="btn btn-default button next"   >Next</a>
   </div>
-</div>
