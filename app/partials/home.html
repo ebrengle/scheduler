@@ -9,41 +9,41 @@
 
       <div class="form-group">
         <label for="firstname">First Name:</label>
-        <input type="text" class="form-control" name="firstname" placeholder="Jane" data-ng-model="firstName">
+        <input type="text" class="form-control" name="firstname" placeholder="Jane" data-ng-model="appointment.firstName">
       </div>
 
       <div class="form-group">
         <label for="lastname">Last Name:</label>
-        <input type="text" class="form-control" name="lastname" placeholder="Doe" data-ng-model="lastName">
+        <input type="text" class="form-control" name="lastname" placeholder="Doe" data-ng-model="appointment.lastName">
       </div>
 
 
       <div class="form-group">
         <label for="birthday">Birthday:</label>
-        <input type="date" class="form-control" name="birthday" data-ng-model="birthday">
+        <input type="date" class="form-control" name="birthday" data-ng-model="appointment.birthday">
       </div>
 
       <div class="form-group">
         <label for="phonenumber">Phone:</label>
-        <input type="tel" class="form-control" name="phonenumber" placeholder="555-555-5555" data-ng-model="phone">
+        <input type="tel" class="form-control" name="phonenumber" placeholder="555-555-5555" data-ng-model="appointment.phone">
       </div>
 
       <div class="form-group">
         <label for="email">Email:</label>
-        <input type="email" class="form-control" name="email" placeholder="You@Email.com" data-ng-model="email">
+        <input type="email" class="form-control" name="email" placeholder="You@Email.com" data-ng-model="appointment.email">
       </div>
 
 
       <label for="email">Preferred Contact Method:</label>
         <div class="radio">
           <label>
-            <input type="radio" name="method" value="Email" id="contactmethodemail" checked data-ng-model="contactPref">
+            <input type="radio" name="method" value="Email" id="contactmethodemail" checked data-ng-model="appointment.contactPref">
             Email
           </label>
         </div>
         <div class="radio">
           <label>
-            <input type="radio" name="method" value="Phone" id="contactmethodphone" checked data-ng-model="contactPref">
+            <input type="radio" name="method" value="Phone" id="contactmethodphone" checked data-ng-model="appointment.contactPref">
             Phone
           </label>
         </div>
