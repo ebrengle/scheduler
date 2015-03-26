@@ -1,11 +1,7 @@
-  <h1 class="logo">3 Elements Chiropractic & Wellness, PLLC</h1>
-  <p class="lead instruction">Request an appointment time online:</p>
-
-
   <!--Basic User Form Input Div -->
 
   <div class="basic-form">
-    <form novalidate>
+
       <div class="form-group">
         <label for="selectProvider">Please Select Your Provider:</label>
         <select class="form-control" name="physician" id="selectProvier" ng-model="appointment.provider">
@@ -24,17 +20,23 @@
       <div class="form-group">
         <label class="control-label"><i class="fa fa-clock-o"></i> Select Appointment Time:</label><br>
         <div class="form-group">
-      <input type="text" size="8" class="form-control" ng-change="selectedTime()" ng-model="appointment.selectedDate.date" ng-disabled="!appointment.selectedDate.date" autoclose="1" placeholder="Time" time-format="HH:mm" minute-step="15" min-time="{{minTime}}" max-time="{{maxTime}}" bs-timepicker>
+      <input type="text" size="8" class="form-control" ng-change="selectedTime()" ng-model="appointment.selectedDate.date"
+      ng-disabled="!appointment.selectedDate.date" autoclose="1" placeholder="Time" time-format="HH:mm" minute-step="15" min-time="{{minTime}}" 
+      max-time="{{maxTime}}" bs-timepicker>
     </div>
       </div>
 
       <div class="form-group">
         <label for="exampleInputEmail1">Request First Available</label>
-        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+        <div class="checkbox">
+          <label>
+            <input type="checkbox" ng-model="appointment.firstAvail"> Request First Avaiable
+          </label>
+        </div>
       </div>
 
 
-    </form>
+
   </div>
   <!--End Basic User Form Input Div -->
 
@@ -44,6 +46,6 @@
   </div>
   <!--End Progress Bar -->
   <div>
-    <a href="#/" class="btn btn-default prev" >Prev</a>
-    <a href="#/confirmation" class="btn btn-default button next"   >Next</a>
+    <a ui-sref="form.basic" class="btn btn-default prev" >Prev</a>
+    <a ui-sref="form.confirm" class="btn btn-default button next"   >Next</a>
   </div>

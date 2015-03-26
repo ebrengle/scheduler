@@ -1,36 +1,64 @@
 //Creating the module named scheduler
-var scheduler = angular.module('scheduler', ['ngRoute', 'mgcrea.ngStrap', ]);
+var scheduler = angular.module('scheduler', ['ngRoute', 'ui.router', 'mgcrea.ngStrap', ]);
 
 //configuring my routes for view of partials
-scheduler.config(function($routeProvider){
-  $routeProvider
+// scheduler.config(function($routeProvider){
+//   $routeProvider
+//
+//     //this is my homepage partial
+//     .when('/', {
+//       templateUrl : 'partials/basic.html',
+//       controller  : 'mainController',
+//       controllerAs: 'appointment'
+//     })
+//
+//     //this is my appointment time view
+//     .when('/selectappt', {
+//       templateUrl : 'partials/selectappointment.html',
+//       controller  : 'mainController',
+//       ControllerAs: 'appointment'
+//     })
+//
+//     //this is my confirmation page
+//     .when('/confirmation', {
+//       templateUrl : 'partials/confirmation.html',
+//       controller  : 'mainController',
+//       ControllerAs: 'appointment'
+//     });
+// });
 
-    //this is my homepage partial
-    .when('/', {
-      templateUrl : 'partials/home.html',
-      controller  : 'mainController',
-      controllerAs: 'appointment'
+scheduler.config(function($stateProvider, $urlRouterProvider){
+
+  $urlRouterProvider.otherwise("/form/basic");
+
+  $stateProvider
+    .state('form', {
+      url: "/form",
+      templateUrl: "partials/form.html",
+      controller: 'mainController'
+
     })
+    .state('form.basic', {
+      url: "/basic",
+      templateUrl: "partials/form.basic.html"
 
-    //this is my appointment time view
-    .when('/selectappt', {
-      templateUrl : 'partials/selectappointment.html',
-      controller  : 'mainController',
-      ControllerAs: 'appointment'
     })
+     .state('form.selectappointment', {
+      url: "/selectappt",
+      templateUrl: "partials/form.selectappointment.html"
 
-    //this is my confirmation page
-    .when('/confirmation', {
-      templateUrl : 'partials/confirmation.html',
-      controller  : 'mainController',
-      ControllerAs: 'appointment'
-    });
+    })
+    .state('form.confirm', {
+     url: "/confirm",
+     templateUrl: "partials/form.confirmation.html"
+
+   })
 });
 
 //this is the controller for my app
 scheduler.controller('mainController', function($scope) {
 
-  // create a message to display in our view
+  $scope.appointment = {};
 
 
 

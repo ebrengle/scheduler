@@ -1,23 +1,16 @@
-<div class="grid-container">
-  <h1 class="logo">3 Elements Chiropractic & Wellness, PLLC</h1>
-  <p class="lead instruction">Request an appointment time online:</p>
-
-
   <!--Basic User Form Input Div -->
   <div class="grid-block">
     <div class="grid-container">
       <div class="basic-form">
-        <p>Name:</p>
-        <p>Birthday:</p>
-        <p>Phone:</p>
-        <p>Email:</p>
+        {{ appointment.firstName }} {{ appointment.lastName }}
+        {{ appointment.birthday }}
+        {{ appointment.phone }}
+        {{ appointment.email }}
+        {{ appointment.contactPref }}
 
-        <p>Provider:</p>
-        <p>Appointment Type:</p>
-        <p>First Choice:</p>
-        <p>Second Choice:</p>
-        <p>First Available:</p>
-
+        {{appointment.provider}}
+        {{appointment.selectedDate.date}}
+        {{appointment.firstAvail}}
       </div>
     </div>
   </div>
@@ -29,6 +22,6 @@
   </div>
   <!--End Progress Bar -->
   <div>
-    <a href="#/selectappt" class="btn btn-default prev">Prev</a>
+    <a ui-sref="form.selectappointment" class="btn btn-default prev">Prev</a>
     <a href="#/" class="btn btn-default button next">Submit</a>
   </div>
