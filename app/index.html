@@ -6,6 +6,7 @@
     <title>3 Elements Chiropractic Online Appointment Request</title>
 
     <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href='http://fonts.googleapis.com/css?family=Josefin+Sans:400,600' rel='stylesheet' type='text/css'>
     <link href="assets/css/main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
@@ -15,7 +16,7 @@
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" href="#">
-            <strong>Online Scheduling App</strong>
+            <strong>Online Scheduler</strong>
           </a>
         </div>
       </div>
@@ -23,13 +24,16 @@
     <!-- End Main Navigation -->
 
     <!--Begin Body of Page -->
-    <div class="container">
+    <div class="container page">
       <div class="row">
-        <div class="col">
-          <div ng-view></div>
-          <div ui-view></div>
-          
+        <div class="col-lg-2"></div>
+        <div class="col-lg-8">
+
+          <div class="main-wrap" ui-view></div>
+
+
         </div>
+        <div class="col-lg-2">
       </div>
     </div>
     <!--End Body of Page -->
