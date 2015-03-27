@@ -2,15 +2,47 @@
   <div class="grid-block">
     <div class="grid-container">
       <div class="basic-form">
-        {{ appointment.firstName }} {{ appointment.lastName }}
-        {{ appointment.birthday }}
-        {{ appointment.phone }}
-        {{ appointment.email }}
-        {{ appointment.contactPref }}
-
-        {{appointment.provider}}
-        {{appointment.selectedDate.date}}
-        {{appointment.firstAvail}}
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th class="table-heading">Patient Information:</tr>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th>Name:</th>
+              <td>{{ appointment.firstName }} {{ appointment.lastName }}</td>
+            </tr>
+            <tr>
+              <th>Birthday:</th>
+              <td>{{ appointment.birthday | date }}</td>
+            </tr>
+            <tr>
+              <th>Phone:</th>
+              <td>{{ appointment.phone }}</td>
+            </tr>
+            <tr>
+              <th>Email:</th>
+              <td>{{ appointment.email }}</td>
+            </tr>
+            <tr>
+              <th>Contact Preference:</th>
+              <td>{{ appointment.contactPref }}</td>
+            </tr>
+            <tr>
+              <th>Provider:</th>
+              <td>{{ appointment.provider }}</td>
+            </tr>
+            <tr>
+              <th>Appointment:</th>
+              <td>{{ appointment.selectedDate.date | date: "EEEE, MM/dd/yyyy 'at' h:mma" }}</td>
+            </tr>
+            <tr>
+              <th>First Available</th>
+              <td>{{ appointment.firstAvail }}</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     </div>
   </div>

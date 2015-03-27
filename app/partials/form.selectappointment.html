@@ -21,7 +21,7 @@
         <label class="control-label"><i class="fa fa-clock-o"></i> Select Appointment Time:</label><br>
         <div class="form-group">
       <input type="text" size="8" class="form-control" ng-change="selectedTime()" ng-model="appointment.selectedDate.date"
-      ng-disabled="!appointment.selectedDate.date" autoclose="1" placeholder="Time" time-format="h:mm a" minute-step="30" min-time="{{minTime}}" 
+      ng-disabled="!appointment.selectedDate.date" length="3" autoclose="1" placeholder="Time" time-format="h:mm a" minute-step="30" min-time="{{minTime}}" 
       max-time="{{maxTime}}" bs-timepicker>
     </div>
       </div>
