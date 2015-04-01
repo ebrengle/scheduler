@@ -27,12 +27,13 @@
       </div>
 
       <div class="form-group">
-        <label for="exampleInputEmail1">Request First Available</label>
-        <div class="checkbox">
+        <label for="exampleInputEmail1">Request First Available:</label>
+        <span class="input-group-addon">
           <label>
-            <input type="checkbox" ng-model="appointment.firstAvail"> Request First Avaiable
-          </label>
-        </div>
+            <input type="checkbox" value="First Available" checked ng-model="appointment.firstAvail">
+          Request First Available
+          <lable>
+        </span>
       </div>
 
 
@@ -46,7 +47,7 @@
   </div>
   <!--End Progress Bar -->
   <div>
-    <a ui-sref="form.basic" class="btn btn-default prev" >Prev</a>
-    <a ui-sref="form.confirm" class="btn btn-default button next"   >Next</a>
+    <a ui-sref="form.basic" class="btn btn-default btn-primary prev" >Prev</a>
+    <a ui-sref="form.confirm" class="btn btn-default btn-success button next"   >Next</a>
   </div>
   <div class="clear"></div>

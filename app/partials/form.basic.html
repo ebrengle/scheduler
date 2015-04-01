@@ -31,22 +31,22 @@
         <input type="email" class="form-control" name="email" placeholder="You@Email.com" data-ng-model="appointment.email">
       </div>
 
-
       <label for="email">Preferred Contact Method:</label>
-        <div class="radio">
-          <label>
-            <input type="radio" name="method" value="Email" id="contactmethodemail" checked data-ng-model="appointment.contactPref">
+        <div class="input-group">
+          <span class="input-group-addon">
+            <label>
+              <input type="radio" name="method" value="Email" id="contactmethodemail" checked data-ng-model="appointment.contactPref">
             Email
-          </label>
-        </div>
-        <div class="radio">
-          <label>
-            <input type="radio" name="method" value="Phone" id="contactmethodphone" checked data-ng-model="appointment.contactPref">
+            <lable>
+          </span>
+          <span class="input-group-addon">
+            <label>
+              <input type="radio" name="method" value="Phone" id="contactmethodphone" checked data-ng-model="appointment.contactPref">
             Phone
-          </label>
-        </div>
+            <lable>
+          </span>
+        </div><!-- /input-group -->
       </div>
-
 
   </div>
   <!--End Basic User Form Input Div -->
@@ -57,8 +57,8 @@
   </div>
   <!--End Progress Bar -->
   <div>
-    <a class="btn btn-default disabled prev" >Prev</a>
-    <a ui-sref="form.selectappointment" class="btn btn-default button next">Next</a>
+    <a class="btn btn-default btn-primary disabled prev" >Prev</a>
+    <a ui-sref="form.selectappointment" class="btn btn-default btn-success button next">Next</a>
   </div>
   <div class="clear"></div>
 </div>
