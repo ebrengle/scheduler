@@ -76,6 +76,10 @@ scheduler.controller('mainController', function($scope) {
 
    $scope.selectedTime = function () {
      console.log($scope.appointment.selectedDate.date);
-   }
+   };
+
+   $scope.appointment.firstAvail = {
+       value : 'No'
+     };
 
 });
