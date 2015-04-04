@@ -7,6 +7,7 @@
 
     <link href="../bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Raleway:400,600' rel='stylesheet' type='text/css'>
+    <link href="../bower_components/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
     <link href="assets/css/main.css" rel="stylesheet" type="text/css">
   </head>
   <body>
@@ -14,14 +15,28 @@
     <!--Main Navigation -->
     <nav class="navbar navbar-default">
       <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#">
-            <strong>Online Scheduler</strong>
-          </a>
-        </div>
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">3ECW Online Appointment Request</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="tel"><a href="tel:+16155995333"><i class="fa fa-phone-square"></i> 615.599.5333</a></li>
+        <li class="email"><a href="mailto:support@3ecw.com"><i class="fa fa-envelope-o"></i> Email Us</a></li>
+      </ul>
+    </div><!-- /.navbar-collapse -->
       </div>
     </nav>
     <!-- End Main Navigation -->
+
+
 
     <!--Begin Body of Page -->
     <div class="container page">
@@ -41,9 +56,9 @@
 
     <!--Bower Components -->
     <script src="../bower_components/angular/angular.min.js"></script>
-    <script src="../bower_components/angular-route/angular-route.min.js"></script>
     <script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script src="../bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
     <script src="../bower_components/angular-strap/dist/angular-strap.min.js"></script>
     <script src="../bower_components/angular-strap/dist/angular-strap.tpl.min.js"></script>
 

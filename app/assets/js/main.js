@@ -1,5 +1,5 @@
 //Creating the module named scheduler
-var scheduler = angular.module('scheduler', ['ngRoute', 'ui.router', 'mgcrea.ngStrap', ]);
+var scheduler = angular.module('scheduler', ['ui.router', 'mgcrea.ngStrap', ]);
 
 scheduler.config(function($stateProvider, $urlRouterProvider){
 
@@ -79,7 +79,7 @@ scheduler.controller('mainController', function($scope) {
    };
 
    $scope.appointment.firstAvail = {
-       value : 'No'
-     };
+     value : 'No'
+   };
 
 });

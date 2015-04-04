@@ -4,6 +4,14 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+label, th, td {
+  font-size: 16px;
+}
+
+.navbar {
+  background-color: #fff;
+}
+
 .instruction {
   text-align: center;
 }
@@ -13,8 +21,18 @@ body {
   width: 200px;
 }
 
+.tel, .email {
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+}
+
+.fa {
+  color: green;
+}
+
 .main-wrap {
-  background-color: rgba(230,230,230,.90);
+  background-color: rgba(230,230,230,.93);
   margin-left: auto;
   margin-right: auto;
 }
@@ -62,6 +80,11 @@ body {
   margin-right: auto;
   padding: 15px;
 
+
+}
+
+table {
+  background-color: #FFF;
 }
 
 .progress {
